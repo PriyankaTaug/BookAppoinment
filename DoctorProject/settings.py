@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Doctorapp'
+    'Doctorapp',
+    'rest_framework',
+     "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'doctordb',
+        'USER':'root',
+        'HOST':'localhost',
+        'PORT':'3307'
     }
 }
 
